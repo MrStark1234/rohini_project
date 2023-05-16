@@ -98,7 +98,7 @@ const Signup = () => {
         headers: { "Content-type": "application/json" },
       };
       const { data } = await axios.post(
-        "/api/user",
+        "https://rohini-backend-5sds.onrender.com/api/user",
         { name, email, password, pic },
         config
       );

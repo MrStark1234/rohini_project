@@ -18,7 +18,7 @@ import axios from "axios";
 import ScrollableChat from "./ScrollableChat";
 import io from "socket.io-client";
 
-const ENDPOINT = "http://localhost:8000";
+const ENDPOINT = "https://rohini-backend-5sds.onrender.com";
 var Socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
@@ -45,7 +45,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       setLoading(true);
 
       const { data } = await axios.get(
-        `/api/message/${selectedChat._id}`,
+        `https://rohini-backend-5sds.onrender.com/api/message/${selectedChat._id}`,
         config
       );
 
@@ -113,7 +113,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         setNewMessage("");
 
         const { data } = await axios.post(
-          "/api/message",
+          "https://rohini-backend-5sds.onrender.com/api/message",
           {
             content: newMessage,
             chatId: selectedChat._id,

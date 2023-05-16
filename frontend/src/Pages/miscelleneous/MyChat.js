@@ -25,7 +25,10 @@ const MyChat = ({ fetchAgain }) => {
         },
       };
 
-      const { data } = await axios.get("/api/chat", config);
+      const { data } = await axios.get(
+        "https://rohini-backend-5sds.onrender.com/api/chat",
+        config
+      );
       // console.log(data);
       setChats(data);
     } catch (error) {
