@@ -13,9 +13,9 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
   const [show, setShow] = useState(false);
 
-  const [email, setEmail] = useState();
+  const [email, setEmail] = useState("");
 
-  const [password, setPassword] = useState();
+  const [password, setPassword] = useState("");
   const toast = useToast();
   const [loading, setLoading] = useState(false);
 
